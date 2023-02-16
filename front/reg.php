@@ -53,7 +53,7 @@
 function chk(){
     let acc=$("#acc").val();
     $.get("./api/chk_acc.php",{acc},(result)=>{
-        if(parseInt(result) || acc=='admin' ){
+        if(parseInt(result)  || acc=='admin' ){
             alert("此帳號已存在,請使用別的帳號")
         }else{
             alert("此帳號可使用")
@@ -74,7 +74,7 @@ function reg(){
             alert("此帳號已存在,請使用別的帳號")
         }else{
             $.post("./api/save_mem.php",mem,()=>{
-                
+              location.href='?do=login'  
             })
         }
     })
