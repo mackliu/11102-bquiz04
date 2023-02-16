@@ -1,3 +1,6 @@
+<?php
+//echo serialize([1,2,3,4,5]);
+?>
 <table class="all">
     <tr>
         <td class="tt ct">帳號</td>
@@ -5,7 +8,7 @@
     </tr>
     <tr>
         <td class="tt ct">密碼</td>
-        <td class="pp"><input type="text" name="pw" id="pw"></td>
+        <td class="pp"><input type="password" name="pw" id="pw"></td>
     </tr>
     <tr>
         <td class="tt ct">驗證碼</td>
@@ -30,7 +33,7 @@ function login(table){
 
             $.get("./api/chk_pw.php",{table,acc:$("#acc").val(),pw:$("#pw").val()},(res)=>{
                 if(parseInt(res)){
-                    location.href='index.php';
+                    location.href='back.php?do=admin';
                 }else{
                     alert("帳號或密碼錯誤,請重新輸入");
                 }
