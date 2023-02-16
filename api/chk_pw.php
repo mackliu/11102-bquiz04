@@ -19,5 +19,4 @@ switch($table){
             echo 0;
         }        
     break;
-
 }

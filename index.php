@@ -24,7 +24,8 @@
                                 <a href="?do=news">最新消息</a> |
                                 <a href="?do=look">購物流程</a> |
                                 <a href="?do=buycart">購物車</a> |
-                                <a href="?do=login">會員登入</a> |
+                                <a href="?do=login">會員登入 </a> |
+                                <a href="#"  onclick="location.href='./api/logout.php?table=mem'">登出</a> | 
                                 <a href="?do=admin">管理登入</a>
                         </div>
 
