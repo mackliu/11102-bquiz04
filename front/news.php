@@ -2,7 +2,7 @@
 
 <!-- table.all>tr.tt>td.ct -->
 <!-- tr*2>td.pp> -->
-
+<!--ctrl+shift+p  使用縮寫換行 tr*>td.pp-->
 <table class="all">
     <tr class="tt">
         <td class="ct">標題</td>
