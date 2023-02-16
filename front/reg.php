@@ -8,7 +8,10 @@
     </tr>
     <tr>
         <td class="tt ct">帳號</td>
-        <td class="pp"><input type="text" name="acc" id=""></td>
+        <td class="pp">
+            <input type="text" name="acc" id="">
+            <button>檢測帳號</button>
+        </td>
     </tr>
     <tr>
         <td class="tt ct">密碼</td>
