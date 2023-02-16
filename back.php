@@ -45,7 +45,7 @@
         ?>			
 		</div>
 		<div id="bottom" style="line-height:70px; color:#FFF; background:url(icon/bot.png);" class="ct">
-			頁尾版權 : </div>
+		<?=$Bottom->find(1)['bottom'];?></div>
 	</div>
 
 </body>

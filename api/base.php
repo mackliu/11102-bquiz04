@@ -155,4 +155,7 @@ function q($sql){
 }
 
 
+$Bottom=new DB('bottom');
+
+
 ?>
