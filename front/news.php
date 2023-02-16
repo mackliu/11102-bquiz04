@@ -1,5 +1,8 @@
 <h2 class="ct">最新消息</h2>
 
+<!-- table.all>tr.tt>td.ct -->
+<!-- tr*2>td.pp> -->
+
 <table class="all">
     <tr class="tt">
         <td class="ct">標題</td>
