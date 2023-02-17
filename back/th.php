@@ -7,7 +7,6 @@
 <div class="ct">
     新增中分類
     <select name="b" id="b">
-
     </select>
     <input type="text" name="mid" id="mid">
     <button>新增</button>
@@ -42,6 +41,11 @@ function addBig(){
         location.reload()
     })
 }
+
+$.get("./api/get_bigs.php",(bigs)=>{
+    $("#b").html(bigs);
+})
+
 
 </script>
 
