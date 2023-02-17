@@ -31,15 +31,25 @@ foreach($bigs as $big){
     </td>
 </tr>
 <?php
-}
+
+if($Type->count(['parent'=>$big['id']]) > 0){
+    $mids=$Type->all(['parent'=>$big['id']]);
+    foreach($mids as $mid){
 ?>
 <tr class="pp ct">
-    <td>dsfaf</td>
+    <td><?=$mid['name'];?></td>
     <td>
-        <button>修改</button>
-        <button>刪除</button>
+        <button data-id="<?=$mid['id'];?>">修改</button>
+        <button onclick="del('Type',<?=$mid['id'];?>)">刪除</button>
     </td>
 </tr>
+
+    <?php
+        }
+    }
+}
+?>
+
 
 </table>
 <script>
