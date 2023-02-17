@@ -1,6 +1,6 @@
 <h2 class="ct">新增商品</h2>
 <!-- table.all>tr*9>td.tt.ct+td.pp>input -->
-<form action="./api/save_goods.php" method="post">
+<form action="./api/save_goods.php" method="post" enctype="multipart/form-data">
     <?php
         $row=$Goods->find($_GET['id']);
     ?>
