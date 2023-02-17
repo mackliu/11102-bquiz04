@@ -26,7 +26,7 @@ foreach($bigs as $big){
 <tr class="tt">
     <td><?=$big['name'];?></td>
     <td class="ct">
-        <button data-id="<?=$big['id'];?>" onclick="editType(this)">修改</button>
+        <button data-id="<?=$big['id'];?>" class="edit-btn">修改</button>
         <button onclick="del('Type',<?=$big['id'];?>)">刪除</button>
     </td>
 </tr>
@@ -39,7 +39,7 @@ if($Type->count(['parent'=>$big['id']]) > 0){
 <tr class="pp ct">
     <td><?=$mid['name'];?></td>
     <td>
-        <button data-id="<?=$mid['id'];?>" onclick="editType(this)">修改</button>
+        <button data-id="<?=$mid['id'];?>" class='edit-btn'>修改</button>
         <button onclick="del('Type',<?=$mid['id'];?>)">刪除</button>
     </td>
 </tr>
@@ -61,7 +61,7 @@ function addType(type){
     })
 }
 
-function editType(dom){
+/* function editType(dom){
     
     let id=$(dom).data('id')
     let name=prompt('請輸入你要修改的分類名稱',$(dom).parent().prev().text());
@@ -70,8 +70,17 @@ function editType(dom){
             location.reload();
         })
     }
-}
+} */
 
+$(".edit-btn").on('click',function(){
+    let id=$(this).data('id')
+    let name=prompt('請輸入你要修改的分類名稱',$(this).parent().prev().text());
+    if(name!=null){
+        $.post('./api/add_type.php',{id,name},()=>{
+            location.reload();
+        })
+    }
+})
 /* 
 $.get("./api/get_bigs.php",(bigs)=>{
     $("#b").html(bigs);
