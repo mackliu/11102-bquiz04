@@ -17,7 +17,7 @@
         <td><?=$row['reg_date'];?></td>
         <td>
             <button onclick="location.href='?do=mem_detail&id=<?=$row['id'];?>'">修改</button>
-            <button onclick="del('mem',<?=$row['id'];?>)">刪除</button>
+            <button onclick="del('Mem',<?=$row['id'];?>)">刪除</button>
         </td>
     </tr>
     <?php
