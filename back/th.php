@@ -16,7 +16,7 @@
         ?>
     </select>
     <input type="text" name="mid" id="mid">
-    <button>新增</button>
+    <button onclick="addMid()">新增</button>
 </div>
 <table class="all">
 <?php
@@ -48,6 +48,15 @@ function addBig(){
         location.reload()
     })
 }
+
+function addMid(){
+    $.post("./api/add_mid.php",{parent:$("#b").val(),name:$("#mid").val()},()=>{
+        location.reload()
+    })
+}
+
+
+
 /* 
 $.get("./api/get_bigs.php",(bigs)=>{
     $("#b").html(bigs);
