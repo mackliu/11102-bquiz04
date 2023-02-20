@@ -32,7 +32,9 @@ foreach($rows as $row){
      <div>
         <div class="tt ct"><?=$row['name'];?></div>
         <div>價錢:<?=$row['price'];?>
-            <img src="./icon/0402.jpg" style="float:right">
+            <img src="./icon/0402.jpg" 
+               style="float:right" 
+             onclick="location.href='?do=buycart&id=<?=$row['id'];?>&qt=1'">
         </div>
         <div>規格:<?=$row['spec'];?></div>
         <div>簡介:<?=$row['intro'];?></div>
