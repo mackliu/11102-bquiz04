@@ -17,9 +17,9 @@
         <div id="main">
                 <div id="top">
                         <a href="index.php">
-                                <img src="./icon/0416.jpg">
+                                <img src="./icon/0416.jpg" style="width:50%">
                         </a>
-                        <div style="padding:10px;">
+                        <div style="padding:10px;display:inline-block;vertical-align:top">
                                 <a href="?">回首頁</a> |
                                 <a href="?do=news">最新消息</a> |
                                 <a href="?do=look">購物流程</a> |
