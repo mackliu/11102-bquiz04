@@ -118,3 +118,14 @@ div.ww:hover > div.s
 {
 	font-size:12px;
 }
+.goods > div > div {
+padding: 5px;
+border:1px solid white;
+}
+
+.goods > div:nth-child(1){
+	padding:5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
