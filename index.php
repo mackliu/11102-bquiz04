@@ -53,13 +53,36 @@
 
                 </div>
                 <div id="left" class="ct">
-                        <div style="min-height:400px;">
-                        </div>
-                        <span>
-                                <div>進站總人數</div>
-                                <div style="color:#f00; font-size:28px;">
-                                        00005 </div>
-                        </span>
+                <div style="min-height:400px;">
+                <a href="">全部商品(<?=$Goods->count(['sh'=>1]);?>)</a>
+                <?php
+                $bigs=$Type->all(['parent'=>0]);
+                foreach($bigs as $big){
+                    echo "<div class='ww'><a href=''>";
+                    echo $big['name'];
+                    echo "(".$Goods->count(['sh'=>1,'big'=>$big['id']]).")";
+                    echo "</a>";
+
+                    if($Type->count(['parent'=>$big['id']])>0){
+                        $mids=$Type->all(['parent'=>$big['id']]);
+                        foreach($mids as $mid){
+                            echo "<div class='s'><a href=''>";
+                            echo $mid['name'];
+                            echo "(".$Goods->count(['sh'=>1,'mid'=>$mid['id']]).")";
+                            echo "</a></div>";
+                        }
+                    }
+                    echo "</div>";
+                }
+
+
+                ?>
+                </div>
+                <span>
+                        <div>進站總人數</div>
+                        <div style="color:#f00; font-size:28px;">
+                                00005 </div>
+                </span>
                 </div>
                 <div id="right">
                 <?php
