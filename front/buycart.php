@@ -42,7 +42,7 @@ if(!isset($_SESSION['cart'])){
         <td><?=$row['price'];?></td>
         <td><?=$row['price'] * $qt;?></td>
         <td>
-            <img src="./icon/0415.jpg" onclick="removeItem(<?=$row['id'];?>)">
+            <img src="./icon/0415.jpg"  onclick="removeItem(<?=$row['id'];?>,this)">
         </td> 
     </tr>
     <?php
@@ -61,9 +61,11 @@ if(!isset($_SESSION['cart'])){
 
 <script>
 
-function removeItem(id){
+function removeItem(id,dom){
     $.post("./api/remove_item.php",{id},()=>{
-        location.href="?do=buycart";
+        //location.href="?do=buycart";
+        $(dom).parents('tr').remove()
+        history.pushState(null,null,'?do=buycart')
     })
 }
 </script>
