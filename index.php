@@ -105,7 +105,6 @@
 
 
                 ?>
-
                 </div>
                 <div id="bottom" style="line-height:70px;background:url(icon/bot.png); color:#FFF;" class="ct">
                 <?=$Bottom->find(1)['bottom'];?></div>
