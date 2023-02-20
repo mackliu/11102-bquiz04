@@ -27,7 +27,8 @@ $goods_type .= $Type->find($goods['mid'])['name']
     <img src="./icon/0402.jpg" onclick='buycart()'>
 </div>
 <div class="ct">
-    <button onclick="location.href='index.php'">返回</button>
+    <!-- <button onclick="location.href='index.php'">返回</button> -->
+    <button onclick="history.go(-1)">返回</button>
 </div>
 
 <script>
