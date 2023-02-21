@@ -1,7 +1,15 @@
 <?php
 
 if(isset($_GET['id'])){
-    $_SESSION['cart'][$_GET['id']]=$_GET['qt'];
+
+    //如果要判斷購物車是否已有該商品
+    if(isset($_SESSION['cart'][$_GET['id']])){
+        $_SESSION['cart'][$_GET['id']] += $_GET['qt'];
+    }else{
+
+        $_SESSION['cart'][$_GET['id']]=$_GET['qt'];
+    }
+    
 }
 
 if(!isset($_SESSION['mem'])){
