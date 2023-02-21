@@ -14,19 +14,19 @@ $order=$Order->find($_GET['id']);
     </tr>
     <tr>
         <td class="tt ct">姓名</td>
-        <td class="pp"><input style="border:0;background-color:transparent" type="text" name="name" id="name" value="<?=$order['name'];?>"></td>
+        <td class="pp"><?=$order['name'];?></td>
     </tr>
     <tr>
         <td class="tt ct">電子信箱</td>
-        <td class="pp"><input style="border:0;background-color:transparent" type="text" name="email" id="email" value="<?=$order['email'];?>"></td>
+        <td class="pp"><?=$order['email'];?></td>
     </tr>
     <tr>
         <td class="tt ct">聯絡地址</td>
-        <td class="pp"><input style="border:0;background-color:transparent" type="text" name="addr" id="addr" value="<?=$order['addr'];?>"></td>
+        <td class="pp"><?=$order['addr'];?></td>
     </tr>
     <tr>
         <td class="tt ct">聯絡電話</td>
-        <td class="pp"><input style="border:0;background-color:transparent" type="text" name="tel" id="tel" value="<?=$order['tel'];?>"></td>
+        <td class="pp"><?=$order['tel'];?></td>
     </tr>
 </table>
 <table class="all" style="margin:0 auto 0 auto;">
