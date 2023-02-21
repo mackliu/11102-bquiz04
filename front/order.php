@@ -55,8 +55,13 @@ $user=$Mem->find(['acc'=>$_SESSION['mem']]);
 </table>
 <table class="all ct" style="margin:0 auto 0 auto;">
     <tr class="tt">
-        <td>總價:<?=$sum;?></td>
-        <input type="hidden" name="total" id="total" value="<?=$sum;?>">
+        <td>總價:<input type="number" 
+                        name="total" 
+                        id="total" 
+                        value="<?=$sum;?>" readonly 
+                        style="border:0;background:transparent">
+        </td>
+        
     </tr>
 </table>
 <div class="ct">
